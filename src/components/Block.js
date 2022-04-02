@@ -1,19 +1,23 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 export default function Block() {
+
+    const [data, setData] = useState('');
+    const [nonce, setNonce] = useState(72608);
+
     return (
         <div className="container">
             <h1 className="text-4xl block mx-10">Block</h1>
-            <div className="container mx-10 my-2 bg-gray-100 w-500">
+            <div className="container mx-10 my-2 bg-green-300 w-500">
                 <label class="block text-gray-700 text-3xl font-bold mx-10 mt-5 mb-1" for="blocknum">
                     Block No
                 </label>
-                <input type="number" className="block mx-10 mb-5 w-4/5" />
+                <input type="number" className="block mx-10 mb-5 w-4/5" value={1}/>
 
                 <label class="block text-gray-700 text-3xl font-bold mx-10 mt-5 mb-1" for="nonce">
                     Nonce
                 </label>
-                <input type="number" className="block mx-10 mb-5 w-4/5" />
+                <input type="number" className="block mx-10 mb-5 w-4/5" value={nonce}/>
                 <label class="block text-gray-700 text-3xl font-bold mx-10 mb-1 mt-5" for="data">
                     Data
                 </label>

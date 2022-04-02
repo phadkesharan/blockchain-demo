@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 export default function Navbar() {
     return (
 
-        <nav className="border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-800 bg-gray-200">
+        <nav className="border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-800 bg-green-300">
             <div className="container flex flex-wrap justify-between items-center mx-auto">
                 <a href="https://flowbite.com" className="flex items-center">
                     <img src="static/blockchain.png" className="mr-3 h-6 sm:h-9" alt="Flowbite Logo" />
