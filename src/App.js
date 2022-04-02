@@ -8,8 +8,8 @@ export default function App() {
   return (
     <div>
       <Navbar />
-      <Block />
-      {/* <Hash /> */}
+      {/* <Block /> */}
+      <Hash />
       {/* <Home /> */}
     </div>
 
