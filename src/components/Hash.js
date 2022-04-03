@@ -13,7 +13,7 @@ export default function Hash() {
 
         <div className="container">
             <h1 className="text-4xl block mx-10">SHA256</h1>
-            <div className="container mx-10 my-2 bg-gray-100 w-500">
+            <div className="container mx-10 my-2 bg-green-300 w-500">
                 <label class="block text-gray-700 text-3xl font-bold mx-10 mb-1 mt-5" for="data">
                     Data
                 </label>
