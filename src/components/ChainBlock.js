@@ -1,13 +1,14 @@
 import React, { useState } from 'react'
 import { sha256 } from 'js-sha256';
 
-export default function ChainBlock() {
+export default function ChainBlock(props) {
 
-    const [data, setData] = useState('');
-    const [nonce, setNonce] = useState(72608);
-    const [hash, setHash] = useState(sha256(String(1) + String(nonce) + data));
+    const [data, setData] = useState(props.data);
+    const [nonce, setNonce] = useState(props.nonce);
+    const [hash, setHash] = useState(props.hash);
     const [color, setColor] = useState('bg-green-300');
-    const [prev, setPrev] = useState('0000000000000000000000000000000000000000000000000000000000000000');
+    const [prev, setPrev] = useState(props.prev);
+    const [blocknum, setBlocknum] = useState(props.blocknum);
 
     const handleDataChange = (e) => {
         setData(e.target.value);
@@ -23,7 +24,7 @@ export default function ChainBlock() {
                 <label class="block text-gray-700 text-l font-bold mx-10 mt-2 mb-1" for="blocknum">
                     Block No
                 </label>
-                <input type="number" className="block mx-10 mb-5 w-4/6" value={1} />
+                <input type="number" className="block mx-10 mb-5 w-4/6" value={blocknum} />
 
                 <label class="block text-gray-700 text-l font-bold ml-10 mt-2 mb-1" for="nonce">
                     Nonce
